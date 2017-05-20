@@ -47,7 +47,7 @@ header('Cache-Control: no cache');
 <?php 
 $statement = $db->prepare("SELECT dateOfRegistr, firstName, lastName, age, height, weightStart FROM user_info");  //user_info (dateOfRegistr, firstName, lastName, age, height, weightStart
 $statement->execute();
-print_r($statement);
+print_r($statement->fetch(PDO::FETCH_ASSOC));
 
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
