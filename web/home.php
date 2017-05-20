@@ -84,15 +84,15 @@ print_r($value2);	echo "<br>";
 
 ?>
 <!-- end of test  -->
-<img src="images/pizza-1.png" alt="pizza">
-<h2>Pizza Delivery</h2>
+<img src="Pepper_Vegetables.jpg" alt="Pepper and Vegetables">
+<h2>Healthy food</h2>
 <br>
 <form method="post" action="cart.php">  
 
-$10 <br>
-PEPPERONI PIZZA
 
-
+USER DATA
+<br>
+Select the user: 
 
 <select name="PEPPERONI">
 <?php
@@ -111,8 +111,9 @@ foreach ($rows as $value2) {
 
 
 <br>
-$12 <br>
-CHEESE PIZZA
+FOOD DATA
+<br>
+Select food: 
 <select name="CHEESE">
   <option value="0" <?php if($_SESSION['CHEESE'] == 0) echo 'selected'; ?>>0</option>
   <option value="1" <?php if($_SESSION['CHEESE'] == 1) echo 'selected'; ?>>1</option>
@@ -120,8 +121,9 @@ CHEESE PIZZA
   <option value="3" <?php if($_SESSION['CHEESE'] == 3) echo 'selected'; ?>>3</option>
 </select><hr>
 <br>
-$14 <br>
-SUPREME PIZZA
+EXERCISES DATA
+<br>
+Select the Exercise: 
 <select name="SUPREME">
 
   <option value="0" <?php if($_SESSION['SUPREME'] == 0) echo 'selected'; ?>>0</option>
