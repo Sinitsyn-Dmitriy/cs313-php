@@ -71,7 +71,7 @@ print_r($value2);	echo "<br>";
 <img src="images/Pepper_Vegetables2.jpg" alt="Pepper and Vegetables" style="width: 500px;">
 <h2>Healthy food</h2>
 <br>
-<form method="post" action="cart.php">  
+<form method="post" action="result.php">  
 
 
 USER DATA
