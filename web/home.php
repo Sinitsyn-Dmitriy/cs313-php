@@ -29,6 +29,11 @@ catch (PDOException $ex)
 
 session_start();
 header('Cache-Control: no cache');
+
+
+$usersSt = $db->prepare("SELECT * FROM user_info WHERE");  
+$usersSt->execute();
+$users = $usersSt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -96,7 +101,7 @@ Select the user:
 
 <select name="PEPPERONI">
 <?php
-foreach ($rows as $value2) {
+foreach ($users as $value2) {
 ?>
 
 <?php echo "<option value='0'>"; 	echo $value2['lastname'];"</option>"; ?>
