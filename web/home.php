@@ -34,6 +34,11 @@ header('Cache-Control: no cache');
 $usersSt = $db->prepare("SELECT * FROM user_info");  
 $usersSt->execute();
 $users = $usersSt->fetchAll(PDO::FETCH_ASSOC);
+
+$foodSt = $db->prepare("SELECT * FROM user_info");  
+$foodSt->execute();
+$food = $foodSt->fetchAll(PDO::FETCH_ASSOC);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -102,14 +107,7 @@ Select the user:
 <select name="PEPPERONI">
 <?php
 foreach ($users as $value2) {
-?>
-
-<?php echo "<option value='0'>"; 	echo $value2['lastname'];"</option>"; ?>
-<!--   <option value="0" <?php if($_SESSION['PEPPERONI'] == 0) echo 'selected'; ?>>0</option>
-  <option value="1" <?php if($_SESSION['PEPPERONI'] == 1) echo 'selected'; ?>>1</option>
-  <option value="2" <?php if($_SESSION['PEPPERONI'] == 2) echo 'selected'; ?>>2</option>
-  <option value="3" <?php if($_SESSION['PEPPERONI'] == 3) echo 'selected'; ?>>3</option> -->
-  <?php 
+ echo "<option value='0'>"; 	echo $value2['lastname'];"</option>"; 
 }
 ?>
 </select><hr>
@@ -120,10 +118,11 @@ FOOD DATA
 <br>
 Select food: 
 <select name="CHEESE">
-  <option value="0" <?php if($_SESSION['CHEESE'] == 0) echo 'selected'; ?>>0</option>
-  <option value="1" <?php if($_SESSION['CHEESE'] == 1) echo 'selected'; ?>>1</option>
-  <option value="2" <?php if($_SESSION['CHEESE'] == 2) echo 'selected'; ?>>2</option>
-  <option value="3" <?php if($_SESSION['CHEESE'] == 3) echo 'selected'; ?>>3</option>
+<?php
+foreach ($users as $value2) {
+ echo "<option value='0'>"; 	echo $value2['foodName'];"</option>"; 
+}
+?>
 </select><hr>
 <br>
 EXERCISES DATA
