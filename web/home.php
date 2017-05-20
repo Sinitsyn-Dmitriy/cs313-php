@@ -94,7 +94,7 @@ Select food:
 <select name="CHEESE">
 <?php
 foreach ($food as $value2) {
- echo "<option value='0'>"; 	echo $value2['foodname'];"</option>"; 
+ echo "<option value='0'>"; 	echo $value2['meal'];"</option>"; 
 }
 ?>
 </select><hr>
