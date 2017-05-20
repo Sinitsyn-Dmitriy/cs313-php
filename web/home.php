@@ -31,7 +31,7 @@ session_start();
 header('Cache-Control: no cache');
 
 
-$usersSt = $db->prepare("SELECT * FROM user_info WHERE");  
+$usersSt = $db->prepare("SELECT * FROM user_info");  
 $usersSt->execute();
 $users = $usersSt->fetchAll(PDO::FETCH_ASSOC);
 ?>
