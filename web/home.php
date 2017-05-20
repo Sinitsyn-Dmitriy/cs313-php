@@ -79,7 +79,7 @@ $rows = $statement3->fetchAll(PDO::FETCH_ASSOC);
 
 foreach ($rows as $value2) {
 
-print_r($value2);	echo "<br>";
+print_r($food);	echo "<br>";
 }
 
 //print_r($statement->fetch(PDO::FETCH_ASSOC));
