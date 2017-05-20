@@ -39,6 +39,9 @@ $foodSt = $db->prepare("SELECT * FROM food");
 $foodSt->execute();
 $food = $foodSt->fetchAll(PDO::FETCH_ASSOC);
 
+$exercisesSt = $db->prepare("SELECT * FROM exercises");  
+$exercisesSt->execute();
+$exercises = $exercisesSt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -129,11 +132,11 @@ EXERCISES DATA
 <br>
 Select the Exercise: 
 <select name="SUPREME">
-
-  <option value="0" <?php if($_SESSION['SUPREME'] == 0) echo 'selected'; ?>>0</option>
-  <option value="1" <?php if($_SESSION['SUPREME'] == 1) echo 'selected'; ?>>1</option>
-  <option value="2" <?php if($_SESSION['SUPREME'] == 2) echo 'selected'; ?>>2</option>
-  <option value="3" <?php if($_SESSION['SUPREME'] == 3) echo 'selected'; ?>>3</option>
+<?php
+foreach ($exercises as $value2) {
+ echo "<option value='0'>"; 	echo $value2['exercise'];"</option>"; 
+}
+?>
 </select>
 <hr>
 
