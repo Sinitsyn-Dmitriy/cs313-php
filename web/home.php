@@ -119,7 +119,7 @@ FOOD DATA
 Select food: 
 <select name="CHEESE">
 <?php
-foreach ($users as $value2) {
+foreach ($food as $value2) {
  echo "<option value='0'>"; 	echo $value2['foodName'];"</option>"; 
 }
 ?>
