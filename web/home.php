@@ -45,7 +45,7 @@ header('Cache-Control: no cache');
 
 <!-- test -->
 <?php 
-$statement = $db->prepare("SELECT book, chapter, verse, content FROM scripture");
+$statement = $db->prepare("SELECT dateOfRegistr, firstName, lastName, age, height, weightStart FROM user_info");  //user_info (dateOfRegistr, firstName, lastName, age, height, weightStart
 $statement->execute();
 print_r($statement);
 
