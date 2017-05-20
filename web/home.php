@@ -51,7 +51,7 @@ $statement->execute();
 $statement2 = $db->prepare("SELECT * FROM user_info");  
 $statement2->execute();
 
-$uid = 1;
+$uid = 3;
 
 $statement3 = $db->prepare("SELECT * FROM user_info WHERE id = '". $uid ."'");  
 $statement3->execute();
