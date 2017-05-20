@@ -51,7 +51,7 @@ $statement->execute();
 $statement2 = $db->prepare("SELECT * FROM user_info");  
 $statement2->execute();
 
-$statement3 = $db->prepare("SELECT * FROM $dbName");  
+$statement3 = $db->prepare("SELECT * FROM user_info, food, weight, exercises");  
 $statement2->execute();
 
 // foreach ($statement2->fetch(PDO::FETCH_ASSOC) as $value) {
@@ -64,7 +64,7 @@ $statement2->execute();
 // print_r($value2);	echo "<br>";
 // }
 
-foreach ($statement2->fetch() as $value2) {
+foreach ($statement3->fetch() as $value2) {
 
 print_r($value2);	echo "<br>";
 }
