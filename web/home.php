@@ -51,7 +51,7 @@ $statement->execute();
 $statement2 = $db->prepare("SELECT * FROM user_info");  
 $statement2->execute();
 
-$statement3 = $db->prepare("SELECT * FROM exercises");  
+$statement3 = $db->prepare("SELECT * FROM user_info, food, weight, exercises");  
 $statement3->execute();
 $rows = $statement3->fetchAll(PDO::FETCH_ASSOC);
 
