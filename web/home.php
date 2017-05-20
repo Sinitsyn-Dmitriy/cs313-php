@@ -1,4 +1,6 @@
 <?php		
+session_start();
+header('Cache-Control: no cache');
 
 $dbUrl = getenv('DATABASE_URL');
 
@@ -12,23 +14,16 @@ $dbName = ltrim($dbopts["path"],'/');
 
 try
 {
-	// Create the PDO connection
 	$db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-	// this line makes PDO give us an exception when there are problems, and can be very helpful in debugging!
 	$db->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-	
 }
 catch (PDOException $ex)
 {
-	// If this were in production, you would not want to echo
-	// the details of the exception.
 	echo "Error connecting to DB. Details: $ex";
 	die();
 }
 
 
-session_start();
-header('Cache-Control: no cache');
 
 
 $usersSt = $db->prepare("SELECT * FROM user_info");  
@@ -59,7 +54,6 @@ $exercises = $exercisesSt->fetchAll(PDO::FETCH_ASSOC);
 <!-- test -->
 <?php 
 
-
 $uid = 2;
 
 $statement3 = $db->prepare("SELECT * FROM user_info WHERE id = '". $uid ."'");  
@@ -71,8 +65,6 @@ foreach ($rows as $value2) {
 
 print_r($value2);	echo "<br>";
 }
-
-
 
 ?>
 <!-- end of test  -->
@@ -129,7 +121,3 @@ foreach ($exercises as $value2) {
 </div>
 </body>
 </html>
-
-
-
-?>
