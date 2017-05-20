@@ -99,7 +99,7 @@ PEPPERONI PIZZA
 foreach ($rows as $value2) {
 ?>
 
-<?php echo "<option value='0'>"; print_r($value2);	echo "</option>"; ?>
+<?php echo "<option value='0'>"; 	echo $value2['lastname'];"</option>"; ?>
 <!--   <option value="0" <?php if($_SESSION['PEPPERONI'] == 0) echo 'selected'; ?>>0</option>
   <option value="1" <?php if($_SESSION['PEPPERONI'] == 1) echo 'selected'; ?>>1</option>
   <option value="2" <?php if($_SESSION['PEPPERONI'] == 2) echo 'selected'; ?>>2</option>
