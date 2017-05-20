@@ -35,7 +35,7 @@ $usersSt = $db->prepare("SELECT * FROM user_info");
 $usersSt->execute();
 $users = $usersSt->fetchAll(PDO::FETCH_ASSOC);
 
-$foodSt = $db->prepare("SELECT * FROM user_info");  
+$foodSt = $db->prepare("SELECT * FROM food");  
 $foodSt->execute();
 $food = $foodSt->fetchAll(PDO::FETCH_ASSOC);
 
