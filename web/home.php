@@ -64,7 +64,7 @@ foreach ($statement2->fetch(PDO::FETCH_ASSOC) as $value2) {
 print_r($value2);	echo "<br>";
 }
 
-foreach ($statement3->fetch(PDO::FETCH_ASSOC) as $value2) {
+foreach ($statement2->fetch() as $value2) {
 //	echo $value
 print_r($value2);	echo "<br>";
 }
