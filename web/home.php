@@ -120,7 +120,7 @@ Select food:
 <select name="CHEESE">
 <?php
 foreach ($food as $value2) {
- echo "<option value='0'>"; 	echo $value2['foodName'];"</option>"; 
+ echo "<option value='0'>"; 	echo $value2['foodname'];"</option>"; 
 }
 ?>
 </select><hr>
