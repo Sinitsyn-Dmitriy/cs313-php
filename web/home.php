@@ -91,12 +91,25 @@ print_r($value2);	echo "<br>";
 
 $10 <br>
 PEPPERONI PIZZA
+
+
+
 <select name="PEPPERONI">
-  <option value="0" <?php if($_SESSION['PEPPERONI'] == 0) echo 'selected'; ?>>0</option>
+<?php
+foreach ($rows as $value2) {
+?>
+
+<?php echo "<option value='0'>"; print_r($value2);	echo "</option>"; ?>
+<!--   <option value="0" <?php if($_SESSION['PEPPERONI'] == 0) echo 'selected'; ?>>0</option>
   <option value="1" <?php if($_SESSION['PEPPERONI'] == 1) echo 'selected'; ?>>1</option>
   <option value="2" <?php if($_SESSION['PEPPERONI'] == 2) echo 'selected'; ?>>2</option>
-  <option value="3" <?php if($_SESSION['PEPPERONI'] == 3) echo 'selected'; ?>>3</option>
+  <option value="3" <?php if($_SESSION['PEPPERONI'] == 3) echo 'selected'; ?>>3</option> -->
+  <?php 
+}
+?>
 </select><hr>
+
+
 <br>
 $12 <br>
 CHEESE PIZZA
