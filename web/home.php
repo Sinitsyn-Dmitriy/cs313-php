@@ -42,6 +42,15 @@ header('Cache-Control: no cache');
 <div id="about">
 <div class="page_wrapper">
 <div class="about_content">
+
+<!-- test -->
+<?php 
+$statement = $db->prepare("SELECT book, chapter, verse, content FROM scripture");
+$statement->execute();
+print_r($statement);
+
+?>
+<!-- end of test  -->
 <img src="images/pizza-1.png" alt="pizza">
 <h2>Pizza Delivery</h2>
 <br>
