@@ -51,9 +51,17 @@ $statement->execute();
 $statement2 = $db->prepare("SELECT * FROM user_info");  
 $statement2->execute();
 
+$statement3 = $db->prepare("SELECT * FROM food");  
+$statement2->execute();
+
 foreach ($statement2->fetch(PDO::FETCH_ASSOC) as $value) {
 //	echo $value
-print_r($value);	
+print_r($value);	echo "<br>";
+}
+
+foreach ($statement3->fetch(PDO::FETCH_ASSOC) as $value) {
+//	echo $value
+print_r($value);	echo "<br>";
 }
 
 //print_r($statement->fetch(PDO::FETCH_ASSOC));
