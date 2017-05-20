@@ -81,7 +81,7 @@ Select the user:
 <select name="PEPPERONI">
 <?php
 foreach ($users as $value2) {
- echo "<option value='0'>"; 	echo $value2['lastname'];"</option>"; 
+ echo "<option value='"; echo $value2['lastname'] . "'>";  echo $value2['lastname'];"</option>"; 
 }
 ?>
 </select><hr>
