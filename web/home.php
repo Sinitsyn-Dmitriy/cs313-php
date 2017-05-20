@@ -58,11 +58,7 @@ $exercises = $exercisesSt->fetchAll(PDO::FETCH_ASSOC);
 
 <!-- test -->
 <?php 
-$statement = $db->prepare("SELECT dateOfRegistr, firstName, lastName, age, height, weightStart FROM user_info");  
-$statement->execute();
 
-$statement2 = $db->prepare("SELECT * FROM user_info");  
-$statement2->execute();
 
 $uid = 2;
 
@@ -70,30 +66,13 @@ $statement3 = $db->prepare("SELECT * FROM user_info WHERE id = '". $uid ."'");
 $statement3->execute();
 $rows = $statement3->fetchAll(PDO::FETCH_ASSOC);
 
-// foreach ($statement2->fetch(PDO::FETCH_ASSOC) as $value) {
-
-// print_r($value);	echo "<br>";
-// }
-
-// foreach ($statement2->fetch(PDO::FETCH_ASSOC) as $value2) {
-
-// print_r($value2);	echo "<br>";
-// }
 
 foreach ($rows as $value2) {
 
 print_r($value2);	echo "<br>";
 }
 
-//print_r($statement->fetch(PDO::FETCH_ASSOC));
 
-// while ($row = $statement->fetch(PDO::FETCH_ASSOC))
-// {
-// 	echo '<p>';
-// 	echo '<strong>' . $row['dateOfRegistr'] . ' ' . $row['firstName'] . ':';
-// 	echo $row['lastName'] . '</strong>' . ' - ' . $row['weightStart'];
-// 	echo '</p>';
-// }
 
 ?>
 <!-- end of test  -->
