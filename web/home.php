@@ -84,7 +84,7 @@ print_r($value2);	echo "<br>";
 
 ?>
 <!-- end of test  -->
-<img src="images/Pepper_Vegetables.jpg" alt="Pepper and Vegetables">
+<img src="images/Pepper_Vegetables.jpg" alt="Pepper and Vegetables" style="width: 500px;">
 <h2>Healthy food</h2>
 <br>
 <form method="post" action="cart.php">  
