@@ -51,7 +51,9 @@ $statement->execute();
 $statement2 = $db->prepare("SELECT * FROM user_info");  
 $statement2->execute();
 
-$statement3 = $db->prepare("SELECT * FROM user_info WHERE id = '1'");  
+$uid = 1;
+
+$statement3 = $db->prepare("SELECT * FROM user_info WHERE id = '". $uid ."'");  
 $statement3->execute();
 $rows = $statement3->fetchAll(PDO::FETCH_ASSOC);
 
