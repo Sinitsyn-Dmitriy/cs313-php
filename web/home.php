@@ -45,8 +45,17 @@ header('Cache-Control: no cache');
 
 <!-- test -->
 <?php 
-$statement = $db->prepare("SELECT dateOfRegistr, firstName, lastName, age, height, weightStart FROM user_info");  //user_info (dateOfRegistr, firstName, lastName, age, height, weightStart
+$statement = $db->prepare("SELECT dateOfRegistr, firstName, lastName, age, height, weightStart FROM user_info");  
 $statement->execute();
+
+$statement2 = $db->prepare("SELECT * FROM user_info");  
+$statement2->execute();
+
+foreach ($statement2->fetch(PDO::FETCH_ASSOC) as $value) {
+//	echo $value
+print_r($value);	
+}
+
 print_r($statement->fetch(PDO::FETCH_ASSOC));
 
 while ($row = $statement->fetch(PDO::FETCH_ASSOC))
