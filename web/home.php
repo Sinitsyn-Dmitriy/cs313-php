@@ -54,18 +54,18 @@ $statement2->execute();
 $statement3 = $db->prepare("SELECT * FROM $dbName");  
 $statement2->execute();
 
-foreach ($statement2->fetch(PDO::FETCH_ASSOC) as $value) {
-//	echo $value
-print_r($value);	echo "<br>";
-}
+// foreach ($statement2->fetch(PDO::FETCH_ASSOC) as $value) {
 
-foreach ($statement2->fetch(PDO::FETCH_ASSOC) as $value2) {
-//	echo $value
-print_r($value2);	echo "<br>";
-}
+// print_r($value);	echo "<br>";
+// }
+
+// foreach ($statement2->fetch(PDO::FETCH_ASSOC) as $value2) {
+
+// print_r($value2);	echo "<br>";
+// }
 
 foreach ($statement2->fetch() as $value2) {
-//	echo $value
+
 print_r($value2);	echo "<br>";
 }
 
