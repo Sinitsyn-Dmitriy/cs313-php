@@ -14,8 +14,8 @@ header('Cache-Control: no cache');
 <div id="about">
 <div class="page_wrapper">
 <div class="about_content">
-<a href="shop.php">back to shop</a><br>
-<img src="images/Pepper_Vegetables2.jpg" alt="Pepper and Vegetables">
+<a href="home.php">back to home page</a><br>
+<img src="images/Pepper_Vegetables2.jpg" alt="Pepper and Vegetables" id="img1">
 
 <?php
 if (isset($_POST["PEPPERONI"])) { $pep = test($_POST["PEPPERONI"]); }

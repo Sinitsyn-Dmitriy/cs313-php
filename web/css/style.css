@@ -314,7 +314,9 @@ transition: all 0.7s ease-in-out;
 .resume_right-content .more-padding {
   padding-left:100px;
 }
-
+#img1 {
+	width: 500px;
+}
 
 
 
