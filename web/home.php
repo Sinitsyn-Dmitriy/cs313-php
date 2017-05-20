@@ -94,7 +94,7 @@ Select food:
 <select name="CHEESE">
 <?php
 foreach ($food as $value2) {
- echo "<option value='0'>"; 	echo $value2['meal'];"</option>"; 
+ echo "<option value='"; echo $value2['meal'] . "'>";  echo $value2['meal'];"</option>"; 	
 }
 ?>
 </select><hr>
@@ -105,7 +105,7 @@ Select the Exercise:
 <select name="SUPREME">
 <?php
 foreach ($exercises as $value2) {
- echo "<option value='0'>"; 	echo $value2['exercise'];"</option>"; 
+ echo "<option value='"; echo $value2['exercise'] . "'>";  echo $value2['exercise'];"</option>"; 
 }
 ?>
 </select>
