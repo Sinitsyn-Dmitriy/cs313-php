@@ -56,18 +56,15 @@ foreach ($statement2->fetch(PDO::FETCH_ASSOC) as $value) {
 print_r($value);	
 }
 
-print_r($statement->fetch(PDO::FETCH_ASSOC));
+//print_r($statement->fetch(PDO::FETCH_ASSOC));
 
-while ($row = $statement->fetch(PDO::FETCH_ASSOC))
-{
-	// The variable "row" now holds the complete record for that
-	// row, and we can access the different values based on their
-	// name
-	echo '<p>';
-	echo '<strong>' . $row['dateOfRegistr'] . ' ' . $row['firstName'] . ':';
-	echo $row['lastName'] . '</strong>' . ' - ' . $row['weightStart'];
-	echo '</p>';
-}
+// while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+// {
+// 	echo '<p>';
+// 	echo '<strong>' . $row['dateOfRegistr'] . ' ' . $row['firstName'] . ':';
+// 	echo $row['lastName'] . '</strong>' . ' - ' . $row['weightStart'];
+// 	echo '</p>';
+// }
 
 ?>
 <!-- end of test  -->
