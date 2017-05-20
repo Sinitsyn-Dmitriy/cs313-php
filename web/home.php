@@ -97,7 +97,7 @@ print_r($food);	echo "<br>";
 
 ?>
 <!-- end of test  -->
-<img src="images/Pepper_Vegetables.jpg" alt="Pepper and Vegetables" style="width: 500px;">
+<img src="images/Pepper_Vegetables2.jpg" alt="Pepper and Vegetables" style="width: 500px;">
 <h2>Healthy food</h2>
 <br>
 <form method="post" action="cart.php">  
