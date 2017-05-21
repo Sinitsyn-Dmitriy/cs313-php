@@ -32,11 +32,11 @@ $usersSt = $db->prepare("SELECT * FROM user_info WHERE lastname = '". $pep ."'")
 $usersSt->execute();
 $users = $usersSt->fetchAll(PDO::FETCH_ASSOC);
 
-$foodSt = $db->prepare("SELECT * FROM food");  
+$foodSt = $db->prepare("SELECT * FROM food WHERE meal = '". $che ."'");  
 $foodSt->execute();
 $food = $foodSt->fetchAll(PDO::FETCH_ASSOC);
 
-$exercisesSt = $db->prepare("SELECT * FROM exercises");  
+$exercisesSt = $db->prepare("SELECT * FROM exercises WHERE exercise = '". $sup ."'");  
 $exercisesSt->execute();
 $exercises = $exercisesSt->fetchAll(PDO::FETCH_ASSOC);
 
@@ -67,14 +67,19 @@ $exercises = $exercisesSt->fetchAll(PDO::FETCH_ASSOC);
 // $_SESSION["CHEESE"] = $che;
 // $_SESSION["SUPREME"] = $sup;
 
-$usersBig = $_SESSION["users"];
-$foodBig = $_SESSION["food"];
-$exercisesBig = $_SESSION["exercises"];
+// $usersBig = $_SESSION["users"];
+// $foodBig = $_SESSION["food"];
+// $exercisesBig = $_SESSION["exercises"];
 
 foreach ($users as $value) {
 	print_r($value);
 } 
-
+foreach ($food as $value) {
+	print_r($value);
+} 
+foreach ($exercises as $value) {
+	print_r($value);
+} 
 
 // print_r($usersBig);
 // print_r($foodBig);
