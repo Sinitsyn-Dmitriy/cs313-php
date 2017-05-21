@@ -1,6 +1,49 @@
-<?php
+<?php		
 session_start();
 header('Cache-Control: no cache');
+
+$dbUrl = getenv('DATABASE_URL');
+
+$dbopts = parse_url($dbUrl);
+
+$dbHost = $dbopts["host"];
+$dbPort = $dbopts["port"];
+$dbUser = $dbopts["user"];
+$dbPassword = $dbopts["pass"];
+$dbName = ltrim($dbopts["path"],'/');
+
+try
+{
+	$db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+	$db->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+}
+catch (PDOException $ex)
+{
+	echo "Error connecting to DB. Details: $ex";
+	die();
+}
+
+if (isset($_POST["PEPPERONI"])) { $pep = test($_POST["PEPPERONI"]); }
+if (isset($_POST["CHEESE"])) { $che = test($_POST["CHEESE"]); }
+if (isset($_POST["SUPREME"])) { $sup = test($_POST["SUPREME"]); }
+
+
+$usersSt = $db->prepare("SELECT * FROM user_info WHERE lastname = '". $pep ."'");  
+$usersSt->execute();
+$users = $usersSt->fetchAll(PDO::FETCH_ASSOC);
+
+$foodSt = $db->prepare("SELECT * FROM food");  
+$foodSt->execute();
+$food = $foodSt->fetchAll(PDO::FETCH_ASSOC);
+
+$exercisesSt = $db->prepare("SELECT * FROM exercises");  
+$exercisesSt->execute();
+$exercises = $exercisesSt->fetchAll(PDO::FETCH_ASSOC);
+
+// $_SESSION["users"] = $users;
+// $_SESSION["food"] = $food;
+// $_SESSION["exercises"] = $exercises;
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,9 +61,7 @@ header('Cache-Control: no cache');
 <img src="images/Pepper_Vegetables2.jpg" alt="Pepper and Vegetables" id="img1">
 
 <?php
-if (isset($_POST["PEPPERONI"])) { $pep = test($_POST["PEPPERONI"]); }
-if (isset($_POST["CHEESE"])) { $che = test($_POST["CHEESE"]); }
-if (isset($_POST["SUPREME"])) { $sup = test($_POST["SUPREME"]); }
+
 
 // $_SESSION["PEPPERONI"] = $pep;
 // $_SESSION["CHEESE"] = $che;
@@ -30,7 +71,7 @@ $usersBig = $_SESSION["users"];
 $foodBig = $_SESSION["food"];
 $exercisesBig = $_SESSION["exercises"];
 
-foreach ($usersBig as $value) {
+foreach ($users as $value) {
 	print_r($value);
 } 
 
