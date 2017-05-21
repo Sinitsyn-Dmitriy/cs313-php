@@ -22,20 +22,25 @@ if (isset($_POST["PEPPERONI"])) { $pep = test($_POST["PEPPERONI"]); }
 if (isset($_POST["CHEESE"])) { $che = test($_POST["CHEESE"]); }
 if (isset($_POST["SUPREME"])) { $sup = test($_POST["SUPREME"]); }
 
-$_SESSION["PEPPERONI"] = $pep;
-$_SESSION["CHEESE"] = $che;
-$_SESSION["SUPREME"] = $sup;
+// $_SESSION["PEPPERONI"] = $pep;
+// $_SESSION["CHEESE"] = $che;
+// $_SESSION["SUPREME"] = $sup;
 
 $usersBig = $_SESSION["users"];
 $foodBig = $_SESSION["food"];
 $exercisesBig = $_SESSION["exercises"];
 
-print_r($usersBig);
-print_r($foodBig);
-print_r($exercisesBig);
+foreach ($usersBig as $value) {
+	print_r($value);
+}
 
-echo "<br>".$pep . "<br>". $che ."<br>". $sup;
-die();
+
+// print_r($usersBig);
+// print_r($foodBig);
+// print_r($exercisesBig);
+
+// echo "<br>".$pep . "<br>". $che ."<br>". $sup;
+// die();
 
 
 // $sum = ($pep * 10) + ($che * 12) + ($sup * 14);
