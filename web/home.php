@@ -114,7 +114,7 @@ foreach ($exercises as $value2) {
 }
 ?>
 </select>
-<hr>
+<hr> 
 
   <br><br>
   <input class="button_right" type="submit" name="submit" value="check result">  
