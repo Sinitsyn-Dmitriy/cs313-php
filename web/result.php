@@ -32,7 +32,7 @@ $exercisesBig = $_SESSION["exercises"];
 
 foreach ($usersBig as $value) {
 	print_r($value);
-}
+} 
 
 
 // print_r($usersBig);
