@@ -86,11 +86,10 @@ foreach ($food as $value) {
 	echo "Date - " . $value[date] . "<br><br><br><hr>";
 } 
 foreach ($exercises as $value) {
-	echo "<br><br>First Name - " . $value[firstname] . "<br>";
-	echo "Last Name - " . $value[lastname] . "<br>";
-	echo "Age - " . $value[age] . "<br>";
-	echo "Height - " . $value[height] . "<br>";
-	echo "Weight at start - " . $value[weightstart] . "<br><br><br><hr>";
+	echo "<br><br>Exercise - " . $value[exercise] . "<br>";
+	echo "Calories loose - " . $value[caloriesloose] . "<br>";
+	echo "Time Spent - " . $value[timespent] . "<br>";
+	echo "Date - " . $value[date] . "<br><br><br><hr>";
 } 
 
 // print_r($usersBig);
