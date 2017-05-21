@@ -70,9 +70,14 @@ $exercises = $exercisesSt->fetchAll(PDO::FETCH_ASSOC);
 // $usersBig = $_SESSION["users"];
 // $foodBig = $_SESSION["food"];
 // $exercisesBig = $_SESSION["exercises"];
+// rray ( [id] => 2 [dateofregistr] => 2017-05-19 [firstname] => Elena [lastname] => Sinitcyna [age] => 30 [height] => 166 [weightstart] => 51 ) Array ( [id] => 2 [date] => 2017-05-19 [foodname] => Apple [meal] => Snack [calories] => 40 ) Array ( [id] => 2 [date] => 2017-05-19 [timespent] => 15 [exercise] => Swiming [caloriesloose] => 180 ) 
 
 foreach ($users as $value) {
-	print_r($value);
+	echo "First Name - " . $value[firstname] . "<br>";
+	echo "Last Name - " . $value[lastname] . "<br>";
+	echo "Age - " . $value[age] . "<br>";
+	echo "Height - " . $value[height] . "<br>";
+	echo "Weight at start - " . $value[weightstart] . "<br><br><br><hr>";
 } 
 foreach ($food as $value) {
 	print_r($value);
