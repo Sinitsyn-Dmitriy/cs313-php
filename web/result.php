@@ -76,8 +76,8 @@ foreach ($users as $value) {
 	echo "<br><br>First Name - " . $value[firstname] . "<br>";
 	echo "Last Name - " . $value[lastname] . "<br>";
 	echo "Age - " . $value[age] . "<br>";
-	echo "Height - " . $value[height] . "<br>";
-	echo "Weight at start - " . $value[weightstart] . "<br><br><br><hr>";
+	echo "Height - " . $value[height] . " sm<br>";
+	echo "Weight at start - " . $value[weightstart] . " kg<br><br><br><hr>";
 } 
 foreach ($food as $value) {
 	echo "<br><br>Food Name - " . $value[foodname] . "<br>";
