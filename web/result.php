@@ -38,33 +38,33 @@ echo "<br>".$pep . "<br>". $che ."<br>". $sup;
 die();
 
 
-$sum = ($pep * 10) + ($che * 12) + ($sup * 14);
-$order = "";
-echo "<h2>Your order is: </h2><br><br>";
+// $sum = ($pep * 10) + ($che * 12) + ($sup * 14);
+// $order = "";
+// echo "<h2>Your order is: </h2><br><br>";
 
-if ($pep > 0) {
+// if ($pep > 0) {
 
-echo "PEPPERONI PIZZA  - " . $pep . "<br><br>";
+// echo "PEPPERONI PIZZA  - " . $pep . "<br><br>";
 
-$order .= "PEPPERONI PIZZA  - " . $pep . "<br>";
-}
-if ($che > 0) {
+// $order .= "PEPPERONI PIZZA  - " . $pep . "<br>";
+// }
+// if ($che > 0) {
 
-echo "CHEESE PIZZA     -" . $che . " <br><br>";
-$order .= "CHEESE PIZZA  - " . $che . "<br>";
-}
-if ($sup > 0) {
+// echo "CHEESE PIZZA     -" . $che . " <br><br>";
+// $order .= "CHEESE PIZZA  - " . $che . "<br>";
+// }
+// if ($sup > 0) {
 
-echo "SUPREME PIZZA   -  " . $sup . " <br><br>";
-$order .= "SUPREME PIZZA  - " . $sup . "<br>";
-}
-if ($che == 0 && $sup == 0 && $pep == 0) {
-echo "your cart is empty";
-}
+// echo "SUPREME PIZZA   -  " . $sup . " <br><br>";
+// $order .= "SUPREME PIZZA  - " . $sup . "<br>";
+// }
+// if ($che == 0 && $sup == 0 && $pep == 0) {
+// echo "your cart is empty";
+// }
 
-$_SESSION["ORDER"] = $order . "<br><br>Your Total is   $" . $sum;
+// $_SESSION["ORDER"] = $order . "<br><br>Your Total is   $" . $sum;
 
-echo "<br>Your Total is   $" . $sum;
+// echo "<br>Your Total is   $" . $sum;
 
 
 
@@ -79,7 +79,7 @@ function test($data) {
 
 ?>
 <br><br>
-<h4>Please input your address for delivery</h4>
+<!-- <h4>Please input your address for delivery</h4>
 <br>
 <p>
 <form method="post" action="congrats.php">  
@@ -104,7 +104,7 @@ Country
 <br><br>
 <input  class="button_right"  type="submit" name="submit" value="Submit the order">  
 </form>
-</p>
+</p> -->
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
