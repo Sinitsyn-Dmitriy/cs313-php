@@ -26,8 +26,15 @@ $_SESSION["PEPPERONI"] = $pep;
 $_SESSION["CHEESE"] = $che;
 $_SESSION["SUPREME"] = $sup;
 
+$usersBig = $_SESSION["users"];
+$foodBig = $_SESSION["food"];
+$exercisesBig = $_SESSION["exercises"];
 
-echo $pep . "<br>". $che ."<br>". $sup;
+print_r($usersBig);
+print_r($foodBig);
+print_r($exercisesBig);
+
+echo "<br>".$pep . "<br>". $che ."<br>". $sup;
 die();
 
 

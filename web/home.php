@@ -37,6 +37,11 @@ $food = $foodSt->fetchAll(PDO::FETCH_ASSOC);
 $exercisesSt = $db->prepare("SELECT * FROM exercises");  
 $exercisesSt->execute();
 $exercises = $exercisesSt->fetchAll(PDO::FETCH_ASSOC);
+
+$_SESSION["users"] = $users;
+$_SESSION["food"] = $food;
+$_SESSION["exercises"] = $exercises;
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -90,7 +95,7 @@ foreach ($users as $value2) {
 <br>
 FOOD DATA
 <br>
-Select food: 
+Select meal: 
 <select name="CHEESE">
 <?php
 foreach ($food as $value2) {
