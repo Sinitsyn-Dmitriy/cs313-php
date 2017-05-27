@@ -77,19 +77,19 @@ foreach ($users as $value) {
 	echo "Last Name - " . $value[lastname] . "<br>";
 	echo "Age - " . $value[age] . "<br>";
 	echo "Height - " . $value[height] . " sm<br>";
-	echo "Weight at start - " . $value[weightstart] . " kg<br><br><br><hr>";
+	echo "Weight at start - " . $value[weightstart] . " kg<br><br><br>";
 } 
 foreach ($food as $value) {
 	echo "<br><br>Food Name - " . $value[foodname] . "<br>";
 	echo "Meal - " . $value[meal] . "<br>";
 	echo "Calories - " . $value[calories] . "<br>";
-	echo "Date - " . $value[date] . "<br><br><br><hr>";
+	echo "Date - " . $value[date] . "<br><br><br>";
 } 
 foreach ($exercises as $value) {
 	echo "<br><br>Exercise - " . $value[exercise] . "<br>";
 	echo "Calories loose - " . $value[caloriesloose] . "<br>";
 	echo "Time Spent - " . $value[timespent] . "<br>";
-	echo "Date - " . $value[date] . "<br><br><br><hr>";
+	echo "Date - " . $value[date] . "<br><br><br>";
 } 
 
 // print_r($usersBig);

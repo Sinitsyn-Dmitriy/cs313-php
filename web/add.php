@@ -28,11 +28,6 @@ if (isset($_POST["calories"])) { $calories = test($_POST["calories"]); }
 if (isset($_POST["meal"])) { $meal = test($_POST["meal"]); }
 if (isset($_POST["dateF"])) { $date = test($_POST["dateF"]); }
 
-	// date DATE  NOT NULL,
-	// foodName VARCHAR(100) NOT NULL,
-	// meal  VARCHAR(100) NOT NULL,
-	// calories SMALLINT NOT NULL
-
 	$query = 'INSERT INTO food(date, foodName, meal, calories) VALUES(:date, :foodName, :meal, :calories)';
 	$statement = $db->prepare($query);
 
@@ -44,6 +39,47 @@ if (isset($_POST["dateF"])) { $date = test($_POST["dateF"]); }
 
 
 
+
+if (isset($_POST["dateOfRegistr"])) { $dateOfRegistr = test($_POST["dateOfRegistr"]); }
+if (isset($_POST["firstName"])) { $firstName = test($_POST["firstName"]); }
+if (isset($_POST["lastName"])) { $lastName = test($_POST["lastName"]); }
+if (isset($_POST["age"])) { $age = test($_POST["age"]); }
+if (isset($_POST["height"])) { $height = test($_POST["height"]); }
+if (isset($_POST["weightStart"])) { $weightStart = test($_POST["weightStart"]); }
+
+	$query = 'INSERT INTO user_info(dateOfRegistr, firstName, lastName, age, height, weightStart) VALUES(:dateOfRegistr, :firstName, :lastName, :age, :height, :weightStart)';
+	$statement = $db->prepare($query);
+
+	$statement->bindValue(':dateOfRegistr', $dateOfRegistr);
+	$statement->bindValue(':firstName', $firstName);
+	$statement->bindValue(':lastName', $lastName);
+	$statement->bindValue(':age', $age);
+	$statement->bindValue(':height', $height);
+	$statement->bindValue(':weightStart', $weightStart);
+	$statement->execute();
+
+// CREATE TABLE exercises
+// (
+// 	id SERIAL NOT NULL PRIMARY KEY,
+// 	date DATE  NOT NULL,
+// 	timeSpent SMALLINT NOT NULL,
+// 	exercise VARCHAR(100) NOT NULL,
+// 	caloriesLoose SMALLINT NOT NULL
+// );
+
+if (isset($_POST["exercise"])) { $exercise = test($_POST["exercise"]); }
+if (isset($_POST["caloriesLoose"])) { $caloriesLoose = test($_POST["caloriesLoose"]); }
+if (isset($_POST["timeSpent"])) { $timeSpent = test($_POST["timeSpent"]); }
+if (isset($_POST["dateE"])) { $dateE = test($_POST["dateE"]); }
+
+	$query = 'INSERT INTO exercises(date, exercise, timeSpent, caloriesLoose) VALUES(:dateE, :exercise, :timeSpent, :caloriesLoose)';
+	$statement = $db->prepare($query);
+
+	$statement->bindValue(':date', $dateE);
+	$statement->bindValue(':exercise', $exercise);
+	$statement->bindValue(':timeSpent', $timeSpent);
+	$statement->bindValue(':caloriesLoose', $caloriesLoose);
+	$statement->execute();
 // $usersSt = $db->prepare("SELECT * FROM user_info WHERE lastname = '". $pep ."'");  
 // $usersSt->execute();
 // $users = $usersSt->fetchAll(PDO::FETCH_ASSOC);
@@ -93,19 +129,19 @@ foreach ($users as $value) {
 	echo "Last Name - " . $value[lastname] . "<br>";
 	echo "Age - " . $value[age] . "<br>";
 	echo "Height - " . $value[height] . " sm<br>";
-	echo "Weight at start - " . $value[weightstart] . " kg<br><br><br><hr>";
+	echo "Weight at start - " . $value[weightstart] . " kg<br><br><br>";
 } 
 foreach ($food as $value) {
 	echo "<br><br>Food Name - " . $value[foodname] . "<br>";
 	echo "Meal - " . $value[meal] . "<br>";
 	echo "Calories - " . $value[calories] . "<br>";
-	echo "Date - " . $value[date] . "<br><br><br><hr>";
+	echo "Date - " . $value[date] . "<br><br><br>";
 } 
 foreach ($exercises as $value) {
 	echo "<br><br>Exercise - " . $value[exercise] . "<br>";
 	echo "Calories loose - " . $value[caloriesloose] . "<br>";
 	echo "Time Spent - " . $value[timespent] . "<br>";
-	echo "Date - " . $value[date] . "<br><br><br><hr>";
+	echo "Date - " . $value[date] . "<br><br><br>";
 } 
 
 // print_r($usersBig);

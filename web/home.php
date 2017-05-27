@@ -89,7 +89,7 @@ foreach ($users as $value2) {
  echo "<option value='"; echo $value2['lastname'] . "'>";  echo $value2['lastname'];"</option>"; 
 }
 ?>
-</select><hr>
+</select>
   <input class="" type="submit" name="submit" value="check result">  
 </form>
 <form method="post" action="result.php">  
@@ -107,7 +107,7 @@ Select meal:
 // echo "<option value='"; echo $value2['meal'] . "'>";  echo $value2['meal'];"</option>"; 	
 //}
 ?>
-</select><hr>
+</select>
   <input class="" type="submit" name="submit" value="check result">  
 </form>
 <form method="post" action="result.php">  
@@ -122,7 +122,7 @@ foreach ($exercises as $value2) {
 }
 ?>
 </select>
-<hr> 
+ 
 
   <br><br>
   <input class="" type="submit" name="submit" value="check result">  
@@ -148,6 +148,54 @@ Input calories
 <br>
 Input date
 <input type="date" id="dateF" name="dateF" required>
+<br>
+  <br><br>
+  <input class="" type="submit" name="submit" value="add food">  
+
+</form>
+
+
+
+<h4>User input</h4>
+<form method="post" action="add.php">
+First Name
+<input type="text" id="firstName" name="firstName" required>
+<br>
+Last Name
+<input type="text" id="lastName" name="lastName" required>
+<br>
+Age
+<input type="number" id="age" name="age" required>
+<br>
+Height
+<input type="number" id="height" name="height" required>
+<br>
+Weight
+<input type="number" id="weightStart" name="weightStart" required>
+<br>
+Date Of Registration
+<input type="number" id="dateOfRegistr" name="dateOfRegistr" required>
+
+  <br><br>
+  <input class="" type="submit" name="submit" value="add food">  
+
+</form>
+
+
+
+<h4>Exercises input</h4>
+<form method="post" action="add.php">
+Exercise
+<input type="text" id="exercise" name="exercise" required>
+<br>
+Input Time Spent
+<input type="text" id="timeSpent" name="timeSpent" required>
+<br>
+Input calories
+<input type="number" id="caloriesLoose" name="caloriesLoose" required>
+<br>
+Input date
+<input type="date" id="dateE" name="dateE" required>
 <br>
   <br><br>
   <input class="" type="submit" name="submit" value="add food">  
