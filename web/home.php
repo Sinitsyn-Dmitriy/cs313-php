@@ -97,10 +97,14 @@ FOOD DATA
 <br>
 Select meal: 
 <select name="CHEESE">
+<option value='Snack'>Snacks</option>
+<option value='Dinner'>Dinners</option>
+<option value='Lunch'>Lunch</option>
+
 <?php
-foreach ($food as $value2) {
- echo "<option value='"; echo $value2['meal'] . "'>";  echo $value2['meal'];"</option>"; 	
-}
+//foreach ($food as $value2) {
+// echo "<option value='"; echo $value2['meal'] . "'>";  echo $value2['meal'];"</option>"; 	
+//}
 ?>
 </select><hr>
 <br>
