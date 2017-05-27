@@ -174,10 +174,10 @@ Weight
 <input type="number" id="weightStart" name="weightStart" required>
 <br>
 Date Of Registration
-<input type="number" id="dateOfRegistr" name="dateOfRegistr" required>
+<input type="data" id="dateOfRegistr" name="dateOfRegistr" required>
 
   <br><br>
-  <input class="" type="submit" name="submit" value="add food">  
+  <input class="" type="submit" name="submit" value="add User">  
 
 </form>
 
@@ -198,7 +198,7 @@ Input date
 <input type="date" id="dateE" name="dateE" required>
 <br>
   <br><br>
-  <input class="" type="submit" name="submit" value="add food">  
+  <input class="" type="submit" name="submit" value="add exercises">  
 
 </form>
 

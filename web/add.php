@@ -58,14 +58,6 @@ if (isset($_POST["weightStart"])) { $weightStart = test($_POST["weightStart"]); 
 	$statement->bindValue(':weightStart', $weightStart);
 	$statement->execute();
 
-// CREATE TABLE exercises
-// (
-// 	id SERIAL NOT NULL PRIMARY KEY,
-// 	date DATE  NOT NULL,
-// 	timeSpent SMALLINT NOT NULL,
-// 	exercise VARCHAR(100) NOT NULL,
-// 	caloriesLoose SMALLINT NOT NULL
-// );
 
 if (isset($_POST["exercise"])) { $exercise = test($_POST["exercise"]); }
 if (isset($_POST["caloriesLoose"])) { $caloriesLoose = test($_POST["caloriesLoose"]); }
