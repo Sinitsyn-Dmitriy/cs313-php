@@ -23,6 +23,8 @@ catch (PDOException $ex)
 	die();
 }
 
+if (isset($_POST["Food"])) {
+
 if (isset($_POST["foodName"])) { $foodName = test($_POST["foodName"]); }
 if (isset($_POST["calories"])) { $calories = test($_POST["calories"]); }
 if (isset($_POST["meal"])) { $meal = test($_POST["meal"]); }
@@ -37,8 +39,9 @@ if (isset($_POST["dateF"])) { $date = test($_POST["dateF"]); }
 	$statement->bindValue(':calories', $calories);
 	$statement->execute();
 
+}
 
-
+if (isset($_POST["User"])) {
 
 if (isset($_POST["dateOfRegistr"])) { $dateOfRegistr = test($_POST["dateOfRegistr"]); }
 if (isset($_POST["firstName"])) { $firstName = test($_POST["firstName"]); }
@@ -57,7 +60,9 @@ if (isset($_POST["weightStart"])) { $weightStart = test($_POST["weightStart"]); 
 	$statement2->bindValue(':height', $height);
 	$statement2->bindValue(':weightStart', $weightStart);
 	$statement2->execute();
+}
 
+if (isset($_POST["Exercise1"])) {
 
 if (isset($_POST["exercise"])) { $exercise = test($_POST["exercise"]); }
 if (isset($_POST["caloriesLoose"])) { $caloriesLoose = test($_POST["caloriesLoose"]); }
@@ -72,7 +77,7 @@ if (isset($_POST["dateE"])) { $dateE = test($_POST["dateE"]); }
 	$statement3->bindValue(':timeSpent', $timeSpent);
 	$statement3->bindValue(':caloriesLoose', $caloriesLoose);
 	$statement3->execute();
-
+}
 
 // $usersSt = $db->prepare("SELECT * FROM user_info WHERE lastname = '". $pep ."'");  
 // $usersSt->execute();

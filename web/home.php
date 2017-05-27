@@ -146,6 +146,7 @@ Input calories
 <br>
 Input date
 <input type="date" id="dateF" name="dateF" required>
+<input type="hidden"  name="Food" value="Food">
 <br>
   <br><br>
   <input class="" type="submit" name="submit" value="add food">  
@@ -173,7 +174,7 @@ Weight
 <br>
 Date Of Registration
 <input type="date" id="dateOfRegistr" name="dateOfRegistr" required>
-
+<input type="hidden"  name="User" value="User">
   <br><br>
   <input class="" type="submit" name="submit" value="add User">  
 
@@ -194,6 +195,7 @@ Input calories
 <br>
 Input date
 <input type="date" id="dateE" name="dateE" required>
+<input type="hidden"  name="Exercise1" value="Exercise1">
 <br>
   <br><br>
   <input class="" type="submit" name="submit" value="add exercises">  
