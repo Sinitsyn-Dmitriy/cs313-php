@@ -40,23 +40,23 @@ if (isset($_POST["dateF"])) { $date = test($_POST["dateF"]); }
 
 
 
-if (isset($_POST["dateOfRegistr"])) { $dateOfRegistr = test($_POST["dateOfRegistr"]); }
-if (isset($_POST["firstName"])) { $firstName = test($_POST["firstName"]); }
-if (isset($_POST["lastName"])) { $lastName = test($_POST["lastName"]); }
-if (isset($_POST["age"])) { $age = test($_POST["age"]); }
-if (isset($_POST["height"])) { $height = test($_POST["height"]); }
-if (isset($_POST["weightStart"])) { $weightStart = test($_POST["weightStart"]); }
+// if (isset($_POST["dateOfRegistr"])) { $dateOfRegistr = test($_POST["dateOfRegistr"]); }
+// if (isset($_POST["firstName"])) { $firstName = test($_POST["firstName"]); }
+// if (isset($_POST["lastName"])) { $lastName = test($_POST["lastName"]); }
+// if (isset($_POST["age"])) { $age = test($_POST["age"]); }
+// if (isset($_POST["height"])) { $height = test($_POST["height"]); }
+// if (isset($_POST["weightStart"])) { $weightStart = test($_POST["weightStart"]); }
 
-	$query = 'INSERT INTO user_info(dateOfRegistr, firstName, lastName, age, height, weightStart) VALUES(:dateOfRegistr, :firstName, :lastName, :age, :height, :weightStart)';
-	$statement = $db->prepare($query);
+// 	$query = 'INSERT INTO user_info(dateOfRegistr, firstName, lastName, age, height, weightStart) VALUES(:dateOfRegistr, :firstName, :lastName, :age, :height, :weightStart)';
+// 	$statement = $db->prepare($query);
 
-	$statement->bindValue(':dateOfRegistr', $dateOfRegistr);
-	$statement->bindValue(':firstName', $firstName);
-	$statement->bindValue(':lastName', $lastName);
-	$statement->bindValue(':age', $age);
-	$statement->bindValue(':height', $height);
-	$statement->bindValue(':weightStart', $weightStart);
-	$statement->execute();
+// 	$statement->bindValue(':dateOfRegistr', $dateOfRegistr);
+// 	$statement->bindValue(':firstName', $firstName);
+// 	$statement->bindValue(':lastName', $lastName);
+// 	$statement->bindValue(':age', $age);
+// 	$statement->bindValue(':height', $height);
+// 	$statement->bindValue(':weightStart', $weightStart);
+// 	$statement->execute();
 
 
 // if (isset($_POST["exercise"])) { $exercise = test($_POST["exercise"]); }
