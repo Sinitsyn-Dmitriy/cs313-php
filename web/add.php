@@ -59,19 +59,19 @@ if (isset($_POST["dateF"])) { $date = test($_POST["dateF"]); }
 // 	$statement->execute();
 
 
-// if (isset($_POST["exercise"])) { $exercise = test($_POST["exercise"]); }
-// if (isset($_POST["caloriesLoose"])) { $caloriesLoose = test($_POST["caloriesLoose"]); }
-// if (isset($_POST["timeSpent"])) { $timeSpent = test($_POST["timeSpent"]); }
-// if (isset($_POST["dateE"])) { $dateE = test($_POST["dateE"]); }
+if (isset($_POST["exercise"])) { $exercise = test($_POST["exercise"]); }
+if (isset($_POST["caloriesLoose"])) { $caloriesLoose = test($_POST["caloriesLoose"]); }
+if (isset($_POST["timeSpent"])) { $timeSpent = test($_POST["timeSpent"]); }
+if (isset($_POST["dateE"])) { $dateE = test($_POST["dateE"]); }
 
-// 	$query = 'INSERT INTO exercises(date, exercise, timeSpent, caloriesLoose) VALUES(:dateE, :exercise, :timeSpent, :caloriesLoose)';
-// 	$statement = $db->prepare($query);
+	$query = 'INSERT INTO exercises(date, exercise, timeSpent, caloriesLoose) VALUES(:dateE, :exercise, :timeSpent, :caloriesLoose)';
+	$statement = $db->prepare($query);
 
-// 	$statement->bindValue(':date', $dateE);
-// 	$statement->bindValue(':exercise', $exercise);
-// 	$statement->bindValue(':timeSpent', $timeSpent);
-// 	$statement->bindValue(':caloriesLoose', $caloriesLoose);
-// 	$statement->execute();
+	$statement->bindValue(':date', $dateE);
+	$statement->bindValue(':exercise', $exercise);
+	$statement->bindValue(':timeSpent', $timeSpent);
+	$statement->bindValue(':caloriesLoose', $caloriesLoose);
+	$statement->execute();
 
 	
 // $usersSt = $db->prepare("SELECT * FROM user_info WHERE lastname = '". $pep ."'");  
