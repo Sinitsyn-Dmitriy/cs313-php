@@ -90,8 +90,9 @@ foreach ($users as $value2) {
 }
 ?>
 </select><hr>
-
-
+  <input class="" type="submit" name="submit" value="check result">  
+</form>
+<form method="post" action="result.php">  
 <br>
 FOOD DATA
 <br>
@@ -107,6 +108,9 @@ Select meal:
 //}
 ?>
 </select><hr>
+  <input class="" type="submit" name="submit" value="check result">  
+</form>
+<form method="post" action="result.php">  
 <br>
 EXERCISES DATA
 <br>
@@ -121,7 +125,7 @@ foreach ($exercises as $value2) {
 <hr> 
 
   <br><br>
-  <input class="button_right" type="submit" name="submit" value="check result">  
+  <input class="" type="submit" name="submit" value="check result">  
 </form>
 
 	<!-- input form -->
@@ -146,7 +150,7 @@ Input date
 <input type="date" id="dateF" name="dateF" required>
 <br>
   <br><br>
-  <input class="button_right" type="submit" name="submit" value="add food">  
+  <input class="" type="submit" name="submit" value="add food">  
 
 </form>
 
