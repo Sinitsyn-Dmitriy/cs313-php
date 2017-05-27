@@ -133,13 +133,9 @@ foreach ($exercises as $value2) {
 <h4>Food input</h4>
 <form method="post" action="add.php">
 Select meal
-<select name="meal">
-<?php
-foreach ($food as $value2) {
- echo "<option value='"; echo $value2['meal'] . "'>";  echo $value2['meal'];"</option>"; 	
-}
-?>
-</select><br>
+<option value='Snack'>Snack</option>
+<option value='Dinner'>Dinner</option>
+<option value='Lunch'>Lunch</option><br>
 Input food name
 <input type="text" id="foodName" name="foodName" required>
 <br>

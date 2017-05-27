@@ -40,23 +40,23 @@ if (isset($_POST["dateF"])) { $date = test($_POST["dateF"]); }
 
 
 
-// if (isset($_POST["dateOfRegistr"])) { $dateOfRegistr = test($_POST["dateOfRegistr"]); }
-// if (isset($_POST["firstName"])) { $firstName = test($_POST["firstName"]); }
-// if (isset($_POST["lastName"])) { $lastName = test($_POST["lastName"]); }
-// if (isset($_POST["age"])) { $age = test($_POST["age"]); }
-// if (isset($_POST["height"])) { $height = test($_POST["height"]); }
-// if (isset($_POST["weightStart"])) { $weightStart = test($_POST["weightStart"]); }
+if (isset($_POST["dateOfRegistr"])) { $dateOfRegistr = test($_POST["dateOfRegistr"]); }
+if (isset($_POST["firstName"])) { $firstName = test($_POST["firstName"]); }
+if (isset($_POST["lastName"])) { $lastName = test($_POST["lastName"]); }
+if (isset($_POST["age"])) { $age = test($_POST["age"]); }
+if (isset($_POST["height"])) { $height = test($_POST["height"]); }
+if (isset($_POST["weightStart"])) { $weightStart = test($_POST["weightStart"]); }
 
-// 	$query = 'INSERT INTO user_info(dateOfRegistr, firstName, lastName, age, height, weightStart) VALUES(:dateOfRegistr, :firstName, :lastName, :age, :height, :weightStart)';
-// 	$statement = $db->prepare($query);
+	$query2 = 'INSERT INTO user_info(dateOfRegistr, firstName, lastName, age, height, weightStart) VALUES(:dateOfRegistr, :firstName, :lastName, :age, :height, :weightStart)';
+	$statement2 = $db->prepare($query2);
 
-// 	$statement->bindValue(':dateOfRegistr', $dateOfRegistr);
-// 	$statement->bindValue(':firstName', $firstName);
-// 	$statement->bindValue(':lastName', $lastName);
-// 	$statement->bindValue(':age', $age);
-// 	$statement->bindValue(':height', $height);
-// 	$statement->bindValue(':weightStart', $weightStart);
-// 	$statement->execute();
+	$statement2->bindValue(':dateOfRegistr', $dateOfRegistr);
+	$statement2->bindValue(':firstName', $firstName);
+	$statement2->bindValue(':lastName', $lastName);
+	$statement2->bindValue(':age', $age);
+	$statement2->bindValue(':height', $height);
+	$statement2->bindValue(':weightStart', $weightStart);
+	$statement2->execute();
 
 
 if (isset($_POST["exercise"])) { $exercise = test($_POST["exercise"]); }
@@ -64,16 +64,16 @@ if (isset($_POST["caloriesLoose"])) { $caloriesLoose = test($_POST["caloriesLoos
 if (isset($_POST["timeSpent"])) { $timeSpent = test($_POST["timeSpent"]); }
 if (isset($_POST["dateE"])) { $dateE = test($_POST["dateE"]); }
 
-	$query = 'INSERT INTO exercises(date, exercise, timeSpent, caloriesLoose) VALUES(:dateE, :exercise, :timeSpent, :caloriesLoose)';
-	$statement = $db->prepare($query);
+	$query3 = 'INSERT INTO exercises(date, exercise, timeSpent, caloriesLoose) VALUES(:dateE, :exercise, :timeSpent, :caloriesLoose)';
+	$statement3 = $db->prepare($query3);
 
-	$statement->bindValue(':date', $dateE);
-	$statement->bindValue(':exercise', $exercise);
-	$statement->bindValue(':timeSpent', $timeSpent);
-	$statement->bindValue(':caloriesLoose', $caloriesLoose);
-	$statement->execute();
+	$statement3->bindValue(':date', $dateE);
+	$statement3->bindValue(':exercise', $exercise);
+	$statement3->bindValue(':timeSpent', $timeSpent);
+	$statement3->bindValue(':caloriesLoose', $caloriesLoose);
+	$statement3->execute();
 
-	
+
 // $usersSt = $db->prepare("SELECT * FROM user_info WHERE lastname = '". $pep ."'");  
 // $usersSt->execute();
 // $users = $usersSt->fetchAll(PDO::FETCH_ASSOC);
