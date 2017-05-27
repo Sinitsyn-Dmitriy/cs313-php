@@ -135,6 +135,7 @@ $db->exec("DELETE FROM user_info WHERE lastName = '" . $lastName . "' ");
 <a href="home.php">back to home page</a><br>
 <img src="images/Pepper_Vegetables2.jpg" alt="Pepper and Vegetables" id="img1">
 
+<h1>DONE!</h1>
 <?php
 
 
