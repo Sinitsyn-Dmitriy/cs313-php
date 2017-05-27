@@ -122,22 +122,25 @@ foreach ($exercises as $value2) {
 
 	<!-- input form -->
 
-
+<h4>Food input</h4>
 <form method="post" action="add.php">
-
+Select meal
 <select name="meal">
 <?php
 foreach ($food as $value2) {
  echo "<option value='"; echo $value2['meal'] . "'>";  echo $value2['meal'];"</option>"; 	
 }
 ?>
-</select>
+</select><br>
+Input food name
 <input type="text" id="foodName" name="foodName" required>
-
+<br>
+Input calories
 <input type="number" id="calories" name="calories" required>
-
+<br>
+Input date
 <input type="date" id="dateF" name="dateF" required>
-
+<br>
   <br><br>
   <input class="button_right" type="submit" name="submit" value="add food">  
 
