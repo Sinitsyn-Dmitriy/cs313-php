@@ -79,7 +79,23 @@ if (isset($_POST["dateE"])) { $dateE = test($_POST["dateE"]); }
 	$statement->execute();
 }
 
+if (isset($_POST["UserDelete"])) {
 
+
+if (isset($_POST["lastName"])) { $lastName = test($_POST["lastName"]); }
+
+
+	$query = "DELETE FROM user_info WHERE lastName = '. $lastName .'";
+	$statement = $db->prepare($query);
+
+	// $statement->bindValue(':dateOfRegistr', $dateOfRegistr);
+	// $statement->bindValue(':firstName', $firstName);
+	// $statement->bindValue(':lastName', $lastName);
+	// $statement->bindValue(':age', $age);
+	// $statement->bindValue(':height', $height);
+	// $statement->bindValue(':weightStart', $weightStart);
+	$statement->execute();
+}
 
 // $usersSt = $db->prepare("SELECT * FROM user_info WHERE lastname = '". $pep ."'");  
 // $usersSt->execute();

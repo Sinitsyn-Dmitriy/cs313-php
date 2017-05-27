@@ -202,6 +202,28 @@ Input date
 
 </form>
 
+
+<h4>Delete User</h4>
+<form method="post" action="add.php">
+
+Last Name
+
+<select name="lastName">
+<?php
+foreach ($users as $value2) {
+ echo "<option value='"; echo $value2['lastname'] . "'>";  echo $value2['lastname'];"</option>"; 
+}
+?>
+</select>
+
+
+<input type="hidden"  name="UserDelete" value="UserDelete">
+  <br><br>
+  <input class="" type="submit" name="submit" value="Delete User">  
+
+</form>
+
+
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </div>
 </div>
