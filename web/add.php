@@ -23,22 +23,38 @@ catch (PDOException $ex)
 	die();
 }
 
-if (isset($_POST["PEPPERONI"])) { $pep = test($_POST["PEPPERONI"]); }
-if (isset($_POST["CHEESE"])) { $che = test($_POST["CHEESE"]); }
-if (isset($_POST["SUPREME"])) { $sup = test($_POST["SUPREME"]); }
+if (isset($_POST["foodName"])) { $foodName = test($_POST["foodName"]); }
+if (isset($_POST["calories"])) { $calories = test($_POST["calories"]); }
+if (isset($_POST["meal"])) { $meal = test($_POST["meal"]); }
+if (isset($_POST["dateF"])) { $date = test($_POST["dateF"]); }
+
+	// date DATE  NOT NULL,
+	// foodName VARCHAR(100) NOT NULL,
+	// meal  VARCHAR(100) NOT NULL,
+	// calories SMALLINT NOT NULL
+
+	$query = 'INSERT INTO food(date, foodName, meal, calories) VALUES(:date, :foodName, :meal, :calories)';
+	$statement = $db->prepare($query);
+
+	$statement->bindValue(':date', $date);
+	$statement->bindValue(':foodName', $foodName);
+	$statement->bindValue(':meal', $meal);
+	$statement->bindValue(':calories', $calories);
+	$statement->execute();
 
 
-$usersSt = $db->prepare("SELECT * FROM user_info WHERE lastname = '". $pep ."'");  
-$usersSt->execute();
-$users = $usersSt->fetchAll(PDO::FETCH_ASSOC);
 
-$foodSt = $db->prepare("SELECT * FROM food WHERE meal = '". $che ."'");  
-$foodSt->execute();
-$food = $foodSt->fetchAll(PDO::FETCH_ASSOC);
+// $usersSt = $db->prepare("SELECT * FROM user_info WHERE lastname = '". $pep ."'");  
+// $usersSt->execute();
+// $users = $usersSt->fetchAll(PDO::FETCH_ASSOC);
 
-$exercisesSt = $db->prepare("SELECT * FROM exercises WHERE exercise = '". $sup ."'");  
-$exercisesSt->execute();
-$exercises = $exercisesSt->fetchAll(PDO::FETCH_ASSOC);
+// $foodSt = $db->prepare("SELECT * FROM food WHERE meal = '". $che ."'");  
+// $foodSt->execute();
+// $food = $foodSt->fetchAll(PDO::FETCH_ASSOC);
+
+// $exercisesSt = $db->prepare("SELECT * FROM exercises WHERE exercise = '". $sup ."'");  
+// $exercisesSt->execute();
+// $exercises = $exercisesSt->fetchAll(PDO::FETCH_ASSOC);
 
 // $_SESSION["users"] = $users;
 // $_SESSION["food"] = $food;

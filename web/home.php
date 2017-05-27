@@ -11,7 +11,7 @@ $dbPort = $dbopts["port"];
 $dbUser = $dbopts["user"];
 $dbPassword = $dbopts["pass"];
 $dbName = ltrim($dbopts["path"],'/');
-
+ 
 try
 {
 	$db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
@@ -118,6 +118,29 @@ foreach ($exercises as $value2) {
 
   <br><br>
   <input class="button_right" type="submit" name="submit" value="check result">  
+</form>
+
+	<!-- input form -->
+
+
+<form method="post" action="add.php">
+
+<select name="meal">
+<?php
+foreach ($food as $value2) {
+ echo "<option value='"; echo $value2['meal'] . "'>";  echo $value2['meal'];"</option>"; 	
+}
+?>
+</select>
+<input type="text" id="foodName" name="foodName" required>
+
+<input type="number" id="calories" name="calories" required>
+
+<input type="date" id="dateF" name="dateF" required>
+
+  <br><br>
+  <input class="button_right" type="submit" name="submit" value="add food">  
+
 </form>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
