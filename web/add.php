@@ -98,7 +98,7 @@ if (isset($_POST["lastName"])) { $lastName = test($_POST["lastName"]); }
 
 
 $usersSt = $db->prepare("DELETE FROM user_info WHERE lastName = '.$lastName.' ");  
-$usersSt->execute();
+$usersSt->executeUpdate();
 //$users = $usersSt->fetchAll(PDO::FETCH_ASSOC);
 
 }
