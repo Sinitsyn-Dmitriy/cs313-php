@@ -85,8 +85,8 @@ if (isset($_POST["UserDelete"])) {
 if (isset($_POST["lastName"])) { $lastName = test($_POST["lastName"]); }
 
 
-	$query = "DELETE FROM user_info WHERE lastName = '. $lastName .'";
-	$statement = $db->prepare($query);
+	// $query = "DELETE FROM user_info WHERE lastName = '. $lastName .'";
+	// $statement = $db->prepare($query);
 
 	// $statement->bindValue(':dateOfRegistr', $dateOfRegistr);
 	// $statement->bindValue(':firstName', $firstName);
@@ -94,7 +94,13 @@ if (isset($_POST["lastName"])) { $lastName = test($_POST["lastName"]); }
 	// $statement->bindValue(':age', $age);
 	// $statement->bindValue(':height', $height);
 	// $statement->bindValue(':weightStart', $weightStart);
-	$statement->execute();
+	// $statement->execute();
+
+
+$usersSt = $db->prepare("DELETE FROM user_info WHERE lastName = $lastName ");  
+$usersSt->execute();
+//$users = $usersSt->fetchAll(PDO::FETCH_ASSOC);
+
 }
 
 // $usersSt = $db->prepare("SELECT * FROM user_info WHERE lastname = '". $pep ."'");  
