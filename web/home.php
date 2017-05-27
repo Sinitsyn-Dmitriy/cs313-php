@@ -129,7 +129,7 @@ foreach ($exercises as $value2) {
 </form>
 
 	<!-- input form -->
-
+ 
 <h4>Food input</h4>
 <form method="post" action="add.php">
 Select meal
