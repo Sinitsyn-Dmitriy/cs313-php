@@ -77,32 +77,13 @@ $rows = $statement3->fetchAll(PDO::FETCH_ASSOC);
 <form method="post" action="info.php">  
 
 
-USER DATA
+Track the statistics 
 <br>
-Select the user: 
 
-<!-- <select name="PEPPERONI">
-<?php //foreach ($users as $value2) { echo "<option value='"; echo $value2['lastname'] . "'>";  echo $value2['lastname'];"</option>"; } ?>
-</select><br><br> -->
-  <input class="" type="submit" name="submit" value="check result"> 
+  <input class="" type="submit" name="submit" value="show statistics"> 
 
-<br>
-<form method="post" action="result.php">  
+<br><br><br>
 
-
-USER DATA
-<br>
-Select the user: 
-
-<select name="PEPPERONI">
-<?php
-foreach ($users as $value2) {
- echo "<option value='"; echo $value2['lastname'] . "'>";  echo $value2['lastname'];"</option>"; 
-}
-?>
-</select><br><br>
-  <input class="" type="submit" name="submit" value="check result">  
-</form>
 <form method="post" action="result.php">  
 <br>
 FOOD DATA
@@ -213,7 +194,22 @@ Input date
 
 </form>
 
+<form method="post" action="result.php">  
 
+
+USER DATA
+<br>
+Select the user: 
+
+<select name="PEPPERONI">
+<?php
+foreach ($users as $value2) {
+ echo "<option value='"; echo $value2['lastname'] . "'>";  echo $value2['lastname'];"</option>"; 
+}
+?>
+</select><br><br>
+  <input class="" type="submit" name="submit" value="check result">  
+</form>
 <h4>Delete User</h4>
 <form method="post" action="add.php">
 
