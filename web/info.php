@@ -132,7 +132,7 @@ function drawChart1() {
 // ['2017-05-20Dinner, 0, 420],['2017-05-19Snack, 0, 40],['2017-05-18Lunch, 0, 150],['2017-05-26Snack, 0, 200],['2017-05-24Lunch, 0, 100],['2017-05-24Dinner, 0, 300],['2017-05-24Dinner, 0, 300],
 <?php  foreach ($food as $value) { echo "['" . $value[date] . " " . $value[meal] . "', '0', '" . $value[calories] . "'],"; }  ?>
 
-<?php  foreach ($food as $value) { echo "['" . $value[date] . " " . $value[meal] . "', '" . $value[calories] . "' , '0'],"; }  ?>
+<?php  foreach ($exercises as $value) { echo "['" . $value[date] . " " . $value[exercise] . "', '" . $value[caloriesloose] . "' , '0'],"; }  ?>
 
 
     ['2017',  1030,      540]
@@ -141,6 +141,14 @@ function drawChart1() {
 
 
 // <?php  
+
+// foreach ($exercises as $value) {
+//   echo "<br><br>Exercise - " . $value[exercise] . "<br>";
+//   echo "Calories loose - " . $value[caloriesloose] . "<br>";
+//   echo "Time Spent - " . $value[timespent] . "<br>";
+//   echo "Date - " . $value[date] . "<br><br><br>";
+// } 
+
 
 // foreach ($food as $value) {
 //   echo "<br><br>Food Name - " . $value[foodname] . "<br>";
