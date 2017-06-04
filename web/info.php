@@ -104,7 +104,7 @@ function test($data) {
   <div class="row">
   <div class="col-md-12 text-center">
 
-
+<a href="home.php">back to home page</a><br>
 
   </div>
   <div class="col-md-4 col-md-offset-4">
