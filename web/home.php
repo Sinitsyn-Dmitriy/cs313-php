@@ -224,7 +224,7 @@ foreach ($users as $value2) {
 }
 ?>
 </select><br><br>
-  <input class="button" type="submit" name="submit" value="check result">  
+  <input class="button" type="submit" name="submit" value="User data">  
 </form>
 <h4>Delete User</h4>
 <form method="post" action="add.php">
