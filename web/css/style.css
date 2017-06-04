@@ -318,6 +318,15 @@ transition: all 0.7s ease-in-out;
 	width: 500px;
 }
 
+#info{
+	background-color: gray;
+}
+#input{
+	background-color: red;
+}
+#users{
+	background-color: blue;
+}
 
 
 .comming_soon_title{
