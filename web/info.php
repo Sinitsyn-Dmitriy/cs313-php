@@ -128,8 +128,21 @@ function drawChart1() {
     ['Date', 'Exercises', 'Food'],
     ['2017-05-18',  1000,      400],
     ['2005',  1170,      460],
+<?php  foreach ($food as $value) { echo "['" . $value[date] .  $value[meal] . ", 0, " . $value[calories] . "],"; }  ?>
     ['2017',  1030,      540]
   ]);
+
+
+
+// <?php  
+
+// foreach ($food as $value) {
+//   echo "<br><br>Food Name - " . $value[foodname] . "<br>";
+//   echo "Meal - " . $value[meal] . "<br>";
+//   echo "Calories - " . $value[calories] . "<br>";
+//   echo "['" . $value[date] .  $value[meal] . ", 0, " . $value[calories] . "],";
+// } 
+?>
 
   var options = {
     title: 'Calories',
@@ -140,25 +153,7 @@ var chart = new google.visualization.ColumnChart(document.getElementById('chart_
   chart.draw(data, options);
 }
 
-// google.load("visualization", "1", {packages:["corechart"]});
-// google.setOnLoadCallback(drawChart2);
-// function drawChart2() {
-//   var data = google.visualization.arrayToDataTable([
-//     ['Year', 'Weight on the start', 'Weight become'],
-//     ['2013',  1000,      400],
-//     ['2014',  1000,      460],
-//     ['2016',  1000,      540]
-//   ]);
 
-//   var options = {
-//     title: 'Weight',
-//     hAxis: {title: 'Weight',  titleTextStyle: {color: '#333'}},
-//     vAxis: {minValue: 0}
-//   };
-
-//   var chart = new google.visualization.AreaChart(document.getElementById('chart_div2'));
-//   chart.draw(data, options);
-// }
 
 $(window).resize(function(){
   drawChart1();
