@@ -130,7 +130,10 @@ function drawChart1() {
     ['2017-05-18',  1000,      400],
     ['2005',  1170,      460],
 // ['2017-05-20Dinner, 0, 420],['2017-05-19Snack, 0, 40],['2017-05-18Lunch, 0, 150],['2017-05-26Snack, 0, 200],['2017-05-24Lunch, 0, 100],['2017-05-24Dinner, 0, 300],['2017-05-24Dinner, 0, 300],
-<?php  foreach ($food as $value) { echo "['" . $value[date] .   $value[meal] . "', '0', '" . $value[calories] . "'],"; }  ?>
+<?php  foreach ($food as $value) { echo "['" . $value[date] . " " . $value[meal] . "', '0', '" . $value[calories] . "'],"; }  ?>
+
+<?php  foreach ($food as $value) { echo "['" . $value[date] . " " . $value[meal] . "', '" . $value[calories] . "' , '0'],"; }  ?>
+
 
     ['2017',  1030,      540]
   ]);
