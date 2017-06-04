@@ -76,7 +76,7 @@ $rows = $statement3->fetchAll(PDO::FETCH_ASSOC);
 <img src="images/Pepper_Vegetables2.jpg" alt="Pepper and Vegetables" id="img1">
 <h2>Healthy food</h2>
 <br>
-<form method="post" action="result.php">  
+<form method="post" action="info.php">  
 
 
 USER DATA
@@ -92,7 +92,7 @@ foreach ($users as $value2) {
 </select><br><br>
   <input class="" type="submit" name="submit" value="check result">  
 </form>
-<form method="post" action="result.php">  
+<form method="post" action="info.php">  
 <br>
 FOOD DATA
 <br>
@@ -110,7 +110,7 @@ Select meal:
 </select><br><br>
   <input class="" type="submit" name="submit" value="check result">  
 </form>
-<form method="post" action="result.php">  
+<form method="post" action="info.php">  
 <br>
 EXERCISES DATA
 <br>

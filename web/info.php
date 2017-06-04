@@ -1,11 +1,83 @@
-<?php 
+<?php  
+session_start();
+header('Cache-Control: no cache');
+
+$dbUrl = getenv('DATABASE_URL');
+
+$dbopts = parse_url($dbUrl);
+
+$dbHost = $dbopts["host"];
+$dbPort = $dbopts["port"];
+$dbUser = $dbopts["user"];
+$dbPassword = $dbopts["pass"];
+$dbName = ltrim($dbopts["path"],'/');
+ 
+try
+{
+  $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+  $db->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+}
+catch (PDOException $ex)
+{
+  echo "Error connecting to DB. Details: $ex";
+  die();
+}
+
+if (isset($_POST["PEPPERONI"])) { $pep = test($_POST["PEPPERONI"]); }
+if (isset($_POST["CHEESE"])) { $che = test($_POST["CHEESE"]); }
+if (isset($_POST["SUPREME"])) { $sup = test($_POST["SUPREME"]); }
+
+
+$usersSt = $db->prepare("SELECT * FROM user_info WHERE lastname = '". $pep ."'");  
+$usersSt->execute();
+$users = $usersSt->fetchAll(PDO::FETCH_ASSOC);
+
+$foodSt = $db->prepare("SELECT * FROM food WHERE meal = '". $che ."'");  
+$foodSt->execute();
+$food = $foodSt->fetchAll(PDO::FETCH_ASSOC);
+
+$exercisesSt = $db->prepare("SELECT * FROM exercises WHERE exercise = '". $sup ."'");  
+$exercisesSt->execute();
+$exercises = $exercisesSt->fetchAll(PDO::FETCH_ASSOC);
+
+
+foreach ($users as $value) {
+  echo "<br><br>First Name - " . $value[firstname] . "<br>";
+  echo "Last Name - " . $value[lastname] . "<br>";
+  echo "Age - " . $value[age] . "<br>";
+  echo "Height - " . $value[height] . " sm<br>";
+  echo "Weight at start - " . $value[weightstart] . " kg<br><br><br>";
+} 
+foreach ($food as $value) {
+  echo "<br><br>Food Name - " . $value[foodname] . "<br>";
+  echo "Meal - " . $value[meal] . "<br>";
+  echo "Calories - " . $value[calories] . "<br>";
+  echo "Date - " . $value[date] . "<br><br><br>";
+} 
+foreach ($exercises as $value) {
+  echo "<br><br>Exercise - " . $value[exercise] . "<br>";
+  echo "Calories loose - " . $value[caloriesloose] . "<br>";
+  echo "Time Spent - " . $value[timespent] . "<br>";
+  echo "Date - " . $value[date] . "<br><br><br>";
+} 
 
 
 
 
 
+function test($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
 
- ?>
+?>
+
+
+
+
+
 
 
  <!DOCTYPE html>
@@ -53,13 +125,9 @@
 google.setOnLoadCallback(drawChart1);
 function drawChart1() {
   var data = google.visualization.arrayToDataTable([
-    ['Year1', 'Exercises', 'Food'],
+    ['Date', 'Exercises', 'Food'],
     ['2017-05-18',  1000,      400],
     ['2005',  1170,      460],
-    ['2006',  660,       1120],
-        ['2017-05-18',  660,       1120],
-            ['2006',  660,       1120],
-                ['2006',  660,       1120],
     ['2017',  1030,      540]
   ]);
 
@@ -79,7 +147,6 @@ function drawChart2() {
     ['Year', 'Weight on the start', 'Weight become'],
     ['2013',  1000,      400],
     ['2014',  1000,      460],
-    ['2015',  1000,       1120],
     ['2016',  1000,      540]
   ]);
 
