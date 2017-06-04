@@ -104,6 +104,7 @@ function test($data) {
   <div class="row">
   <div class="col-md-12 text-center">
 
+<?php  foreach ($food as $value) { echo "['" . $value[date] .  $value[meal] . ", 0, " . $value[calories] . "],"; }  ?>
 
   </div>
   <div class="col-md-4 col-md-offset-4">
@@ -128,7 +129,8 @@ function drawChart1() {
     ['Date', 'Exercises', 'Food'],
     ['2017-05-18',  1000,      400],
     ['2005',  1170,      460],
-<?php  foreach ($food as $value) { echo "['" . $value[date] .  $value[meal] . ", 0, " . $value[calories] . "],"; }  ?>
+<?php  //foreach ($food as $value) { echo "['" . $value[date] .  $value[meal] . ", 0, " . $value[calories] . "],"; }  ?>
+
     ['2017',  1030,      540]
   ]);
 
