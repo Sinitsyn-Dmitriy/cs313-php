@@ -123,7 +123,7 @@ function test($data) {
 
     <script>
     	google.load("visualization", "1", {packages:["corechart"]});
-google.setOnLoadCallback(drawChart1);
+google.setOnLoadCallback(drawChart1); 
 function drawChart1() {
   var data = google.visualization.arrayToDataTable([
     ['Date', 'Exercises', 'Food'],
