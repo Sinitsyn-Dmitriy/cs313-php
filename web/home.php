@@ -82,6 +82,8 @@ Track the statistics
 
   <input class="" type="submit" name="submit" value="show statistics"> 
 
+</form>
+
 <br><br><br>
 
 <form method="post" action="result.php">  
