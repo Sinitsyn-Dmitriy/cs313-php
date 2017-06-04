@@ -140,25 +140,25 @@ var chart = new google.visualization.ColumnChart(document.getElementById('chart_
   chart.draw(data, options);
 }
 
-google.load("visualization", "1", {packages:["corechart"]});
-google.setOnLoadCallback(drawChart2);
-function drawChart2() {
-  var data = google.visualization.arrayToDataTable([
-    ['Year', 'Weight on the start', 'Weight become'],
-    ['2013',  1000,      400],
-    ['2014',  1000,      460],
-    ['2016',  1000,      540]
-  ]);
+// google.load("visualization", "1", {packages:["corechart"]});
+// google.setOnLoadCallback(drawChart2);
+// function drawChart2() {
+//   var data = google.visualization.arrayToDataTable([
+//     ['Year', 'Weight on the start', 'Weight become'],
+//     ['2013',  1000,      400],
+//     ['2014',  1000,      460],
+//     ['2016',  1000,      540]
+//   ]);
 
-  var options = {
-    title: 'Weight',
-    hAxis: {title: 'Weight',  titleTextStyle: {color: '#333'}},
-    vAxis: {minValue: 0}
-  };
+//   var options = {
+//     title: 'Weight',
+//     hAxis: {title: 'Weight',  titleTextStyle: {color: '#333'}},
+//     vAxis: {minValue: 0}
+//   };
 
-  var chart = new google.visualization.AreaChart(document.getElementById('chart_div2'));
-  chart.draw(data, options);
-}
+//   var chart = new google.visualization.AreaChart(document.getElementById('chart_div2'));
+//   chart.draw(data, options);
+// }
 
 $(window).resize(function(){
   drawChart1();
