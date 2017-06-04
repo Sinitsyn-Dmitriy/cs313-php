@@ -81,9 +81,9 @@ USER DATA
 <br>
 Select the user: 
 
-<select name="PEPPERONI">
+<!-- <select name="PEPPERONI">
 <?php //foreach ($users as $value2) { echo "<option value='"; echo $value2['lastname'] . "'>";  echo $value2['lastname'];"</option>"; } ?>
-</select><br><br>
+</select><br><br> -->
   <input class="" type="submit" name="submit" value="check result"> 
 
 <br>
