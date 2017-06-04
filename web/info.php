@@ -135,7 +135,7 @@ function drawChart1() {
 <?php  foreach ($exercises as $value) { echo "['" . $value[date] . " " . $value[exercise] . "', '" . $value[caloriesloose] . "' , '0'],"; }  ?>
 
 
-    ['0',  0,      0]
+    // ['0',  '0',      '0']
   ]);
 
 
