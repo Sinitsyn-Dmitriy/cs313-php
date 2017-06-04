@@ -126,7 +126,7 @@ function test($data) {
 google.setOnLoadCallback(drawChart1); 
 function drawChart1() {
   var data = google.visualization.arrayToDataTable([
-    ['Date', 'Exercises', 'Food'],
+    ['Date', 'Exercises, loose calories', 'Food, add calories'],
      ['2000-01-01',  0,      0],
     // ['2005',  1170,      460],
 // ['2017-05-20Dinner, 0, 420],['2017-05-19Snack, 0, 40],['2017-05-18Lunch, 0, 150],['2017-05-26Snack, 0, 200],['2017-05-24Lunch, 0, 100],['2017-05-24Dinner, 0, 300],['2017-05-24Dinner, 0, 300],
