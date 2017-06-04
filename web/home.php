@@ -75,6 +75,7 @@ $rows = $statement3->fetchAll(PDO::FETCH_ASSOC);
 <!-- end of test  -->
 <img src="images/Pepper_Vegetables2.jpg" alt="Pepper and Vegetables" id="img1">
 <h2>Healthy food</h2>
+
 <br>
 <form method="post" action="info.php">  
 
@@ -90,9 +91,26 @@ foreach ($users as $value2) {
 }
 ?>
 </select><br><br>
+  <input class="" type="submit" name="submit" value="check result"> 
+
+<br>
+<form method="post" action="result.php">  
+
+
+USER DATA
+<br>
+Select the user: 
+
+<select name="PEPPERONI">
+<?php
+foreach ($users as $value2) {
+ echo "<option value='"; echo $value2['lastname'] . "'>";  echo $value2['lastname'];"</option>"; 
+}
+?>
+</select><br><br>
   <input class="" type="submit" name="submit" value="check result">  
 </form>
-<form method="post" action="info.php">  
+<form method="post" action="result.php">  
 <br>
 FOOD DATA
 <br>
@@ -110,7 +128,7 @@ Select meal:
 </select><br><br>
   <input class="" type="submit" name="submit" value="check result">  
 </form>
-<form method="post" action="info.php">  
+<form method="post" action="result.php">  
 <br>
 EXERCISES DATA
 <br>

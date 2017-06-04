@@ -28,15 +28,15 @@ if (isset($_POST["CHEESE"])) { $che = test($_POST["CHEESE"]); }
 if (isset($_POST["SUPREME"])) { $sup = test($_POST["SUPREME"]); }
 
 
-$usersSt = $db->prepare("SELECT * FROM user_info WHERE lastname = '". $pep ."'");  
+$usersSt = $db->prepare("SELECT * FROM user_info ");  
 $usersSt->execute();
 $users = $usersSt->fetchAll(PDO::FETCH_ASSOC);
 
-$foodSt = $db->prepare("SELECT * FROM food WHERE meal = '". $che ."'");  
+$foodSt = $db->prepare("SELECT * FROM food ");  
 $foodSt->execute();
 $food = $foodSt->fetchAll(PDO::FETCH_ASSOC);
 
-$exercisesSt = $db->prepare("SELECT * FROM exercises WHERE exercise = '". $sup ."'");  
+$exercisesSt = $db->prepare("SELECT * FROM exercises ");  
 $exercisesSt->execute();
 $exercises = $exercisesSt->fetchAll(PDO::FETCH_ASSOC);
 
