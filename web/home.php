@@ -77,11 +77,13 @@ $rows = $statement3->fetchAll(PDO::FETCH_ASSOC);
 <form method="post" action="info.php">  
 
 <div id="info">
+<hr>
+<h2>statistics</h2>
 
 Track the statistics 
 <br>
 
-  <input class="" type="submit" name="submit" value="show statistics"> 
+  <input class="button" type="submit" name="submit" value="show statistics"> 
 
 </form>
 
@@ -103,7 +105,7 @@ Select meal:
 //}
 ?>
 </select><br><br>
-  <input class="" type="submit" name="submit" value="check result">  
+  <input class="button" type="submit" name="submit" value="check result">  
 </form>
 <form method="post" action="result.php">  
 <br>
@@ -120,14 +122,16 @@ foreach ($exercises as $value2) {
  
 
   <br><br>
-  <input class="" type="submit" name="submit" value="check result">  
+  <input class="button" type="submit" name="submit" value="check result">  
 </form>
 
 </div>
 
 	<!-- input form -->
 <div id="input">
- 
+<hr>
+<h2>Input</h2> 
+
 <h4>Food input</h4>
 <form method="post" action="add.php">
 Select meal
@@ -147,7 +151,7 @@ Input date
 <input type="hidden"  name="Food" value="Food">
 <br>
   <br><br>
-  <input class="" type="submit" name="submit" value="add food">  
+  <input class="button" type="submit" name="submit" value="add food">  
 
 </form>
 
@@ -174,7 +178,7 @@ Date Of Registration
 <input type="date" id="dateOfRegistr" name="dateOfRegistr" required>
 <input type="hidden"  name="User" value="User">
   <br><br>
-  <input class="" type="submit" name="submit" value="add User">  
+  <input class="button" type="submit" name="submit" value="add User">  
 
 </form>
 
@@ -196,13 +200,15 @@ Input date
 <input type="hidden"  name="Exercise1" value="Exercise1">
 <br>
   <br><br>
-  <input class="" type="submit" name="submit" value="add exercises">  
+  <input class="button" type="submit" name="submit" value="add exercises">  
 
 </form>
 
 </div>
 
 <div id="users">
+<hr>
+<h2>User</h2>
 
 <form method="post" action="result.php">  
 
@@ -218,7 +224,7 @@ foreach ($users as $value2) {
 }
 ?>
 </select><br><br>
-  <input class="" type="submit" name="submit" value="check result">  
+  <input class="button" type="submit" name="submit" value="check result">  
 </form>
 <h4>Delete User</h4>
 <form method="post" action="add.php">
@@ -236,10 +242,10 @@ foreach ($users as $value2) {
 
 <input type="hidden"  name="UserDelete" value="UserDelete">
   <br><br>
-  <input class="" type="submit" name="submit" value="Delete User">  
+  <input class="button" type="submit" name="submit" value="Delete User">  
 
 </form>
-
+<hr>
 </div>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
