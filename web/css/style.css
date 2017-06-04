@@ -320,12 +320,21 @@ transition: all 0.7s ease-in-out;
 
 #info{
 	background-color: gray;
+	width: 40%;
+
 }
 #input{
-	background-color: red !important;
+	background-color: red;
+	width: 30%;
+
 }
 #users{
 	background-color: blue;
+	width: 20%;
+}
+
+button{
+	margin: 30px;
 }
 
 
