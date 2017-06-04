@@ -41,25 +41,25 @@ $exercisesSt->execute();
 $exercises = $exercisesSt->fetchAll(PDO::FETCH_ASSOC);
 
 
-foreach ($users as $value) {
-  echo "<br><br>First Name - " . $value[firstname] . "<br>";
-  echo "Last Name - " . $value[lastname] . "<br>";
-  echo "Age - " . $value[age] . "<br>";
-  echo "Height - " . $value[height] . " sm<br>";
-  echo "Weight at start - " . $value[weightstart] . " kg<br><br><br>";
-} 
-foreach ($food as $value) {
-  echo "<br><br>Food Name - " . $value[foodname] . "<br>";
-  echo "Meal - " . $value[meal] . "<br>";
-  echo "Calories - " . $value[calories] . "<br>";
-  echo "Date - " . $value[date] . "<br><br><br>";
-} 
-foreach ($exercises as $value) {
-  echo "<br><br>Exercise - " . $value[exercise] . "<br>";
-  echo "Calories loose - " . $value[caloriesloose] . "<br>";
-  echo "Time Spent - " . $value[timespent] . "<br>";
-  echo "Date - " . $value[date] . "<br><br><br>";
-} 
+// foreach ($users as $value) {
+//   echo "<br><br>First Name - " . $value[firstname] . "<br>";
+//   echo "Last Name - " . $value[lastname] . "<br>";
+//   echo "Age - " . $value[age] . "<br>";
+//   echo "Height - " . $value[height] . " sm<br>";
+//   echo "Weight at start - " . $value[weightstart] . " kg<br><br><br>";
+// } 
+// foreach ($food as $value) {
+//   echo "<br><br>Food Name - " . $value[foodname] . "<br>";
+//   echo "Meal - " . $value[meal] . "<br>";
+//   echo "Calories - " . $value[calories] . "<br>";
+//   echo "Date - " . $value[date] . "<br><br><br>";
+// } 
+// foreach ($exercises as $value) {
+//   echo "<br><br>Exercise - " . $value[exercise] . "<br>";
+//   echo "Calories loose - " . $value[caloriesloose] . "<br>";
+//   echo "Time Spent - " . $value[timespent] . "<br>";
+//   echo "Date - " . $value[date] . "<br><br><br>";
+// } 
 
 
 
@@ -104,7 +104,7 @@ function test($data) {
   <div class="row">
   <div class="col-md-12 text-center">
 
-<?php  foreach ($food as $value) { echo "['" . $value[date] .  $value[meal] . ", 0, " . $value[calories] . "],"; }  ?>
+
 
   </div>
   <div class="col-md-4 col-md-offset-4">
@@ -128,35 +128,15 @@ function drawChart1() {
   var data = google.visualization.arrayToDataTable([
     ['Date', 'Exercises, loose calories', 'Food, add calories'],
      ['2000 calories',  0,      0],
-    // ['2005',  1170,      460],
-// ['2017-05-20Dinner, 0, 420],['2017-05-19Snack, 0, 40],['2017-05-18Lunch, 0, 150],['2017-05-26Snack, 0, 200],['2017-05-24Lunch, 0, 100],['2017-05-24Dinner, 0, 300],['2017-05-24Dinner, 0, 300],
+
 <?php  foreach ($food as $value) { echo "['" . $value[date] . " " . $value[meal] . "', '0', '" . $value[calories] . "'],"; }  ?>
 
 <?php  foreach ($exercises as $value) { echo "['" . $value[date] . " " . $value[exercise] . "', '" . $value[caloriesloose] . "' , '0'],"; }  ?>
 
-
-    // ['2017',  1030,      540]
   ]);
 
 
 
-// <?php  
-
-// foreach ($exercises as $value) {
-//   echo "<br><br>Exercise - " . $value[exercise] . "<br>";
-//   echo "Calories loose - " . $value[caloriesloose] . "<br>";
-//   echo "Time Spent - " . $value[timespent] . "<br>";
-//   echo "Date - " . $value[date] . "<br><br><br>";
-// } 
-
-
-// foreach ($food as $value) {
-//   echo "<br><br>Food Name - " . $value[foodname] . "<br>";
-//   echo "Meal - " . $value[meal] . "<br>";
-//   echo "Calories - " . $value[calories] . "<br>";
-//   echo "['" . $value[date] .  $value[meal] . ", 0, " . $value[calories] . "],";
-// } 
-?>
 
   var options = {
     title: 'Calories',

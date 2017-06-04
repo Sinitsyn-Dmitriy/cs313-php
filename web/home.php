@@ -56,7 +56,7 @@ $_SESSION["exercises"] = $exercises;
 <div class="page_wrapper">
 <div class="about_content">
 
-<!-- test -->
+
 <?php 
 
 $uid = 2;
@@ -66,13 +66,10 @@ $statement3->execute();
 $rows = $statement3->fetchAll(PDO::FETCH_ASSOC);
 
 
-// foreach ($rows as $value2) {
 
-// print_r($value2);	echo "<br>";
-// }
 
 ?>
-<!-- end of test  -->
+
 <img src="images/Pepper_Vegetables2.jpg" alt="Pepper and Vegetables" id="img1">
 <h2>Healthy food</h2>
 
