@@ -54,10 +54,10 @@ google.setOnLoadCallback(drawChart1);
 function drawChart1() {
   var data = google.visualization.arrayToDataTable([
     ['Year1', 'Exercises', 'Food'],
-    ['2004',  1000,      400],
+    ['2017-05-18',  1000,      400],
     ['2005',  1170,      460],
     ['2006',  660,       1120],
-        ['2006',  660,       1120],
+        ['2017-05-18',  660,       1120],
             ['2006',  660,       1120],
                 ['2006',  660,       1120],
     ['2017',  1030,      540]
